@@ -1,6 +1,5 @@
 /* ******************** WIGGLING HAND A.K.A. WAVING ******************** */
 
-
 /* set keyframes name as 'wiggles' */
 @keyframes wiggle { 
 
@@ -55,7 +54,6 @@
 
 /* ******************** RIC FLAIR ANIMATION CSS ******************** */
 
-
 /* 
     animation starts text off screen and pulls it to original placement 
 */
@@ -81,8 +79,6 @@ li {
 .item-5 {  animation-delay: 2s; }
 .item-6 {  animation-delay: 2.5s; }
 .item-7 {  animation-delay: 3s; }
-
-
 
 
 /* ******************** SOME CSS TO LAYOUT THINGS NICELY ******************** */
