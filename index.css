@@ -1,29 +1,53 @@
+/* centers everything horizantally on page */
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+.wiggle-container{
+
+}
+
+
+
+
+
+
+
+
+/* RIC FLAIR ANIMATION CSS */
+.ric-flair-container{
+    border: 1px solid black;
+}
+
+/* ric flair picture */
 .ric-img {
     height: 300px;
 }
 
 
+/* animation starts text off screen and pulls it to original placement */
 @keyframes example {
     from {left: 110vw;}
     to {left: 0}
 }
-  
+
 li {
-    position: relative;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 3s;
+    position: relative; /* so it's free to move */
+    animation-name: example; /* applies css in keyframes rule immediately above */
+    animation-duration: 3s;  /* seconds animation should last */
 }
 
-.item-2 {  animation-delay: 1s; }
-.item-3 {  animation-delay: 1.5s; }
-.item-4 {  animation-delay: 2s; }
-.item-5 {  animation-delay: 2.5s; }
-.item-6 {  animation-delay: 3s; }
-.item-7 {  animation-delay: 3.5s; }
+/* 
+    the following delays each li before animation starts in seconds
+    staggered each item's seconds, each start a half second later
+    skipped first item so starts immediately 
+*/
+.item-2 {  animation-delay: 0.5s; } 
+.item-3 {  animation-delay: 1s; }   
+.item-4 {  animation-delay: 1.5s; } 
+.item-5 {  animation-delay: 2s; }
+.item-6 {  animation-delay: 2.5s; }
+.item-7 {  animation-delay: 3s; }
