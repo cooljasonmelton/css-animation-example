@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ric-img {
+    height: 300px;
+}
+
+
+@keyframes example {
+    from {left: 110vw;}
+    to {left: 0}
+}
+  
+li {
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 3s;
+}
+
+.item-2 {  animation-delay: 1s; }
+.item-3 {  animation-delay: 1.5s; }
+.item-4 {  animation-delay: 2s; }
+.item-5 {  animation-delay: 2.5s; }
+.item-6 {  animation-delay: 3s; }
+.item-7 {  animation-delay: 3.5s; }
