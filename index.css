@@ -1,43 +1,70 @@
-/* centers everything horizantally on page */
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ********** WIGGLING HAND AKA WAVING ********** */
+
+
+/* 
+    wiggles target back and forth
+    set keyframes name 'wiggles' 
+*/
+@keyframes wiggle { 
+    from {left: 20px;} 
+    to {right: 20px;}
 }
 
 
-.wiggle-container{
+.hand-img{
+    position: relative; /* must be relative so left and right works (above) */
+    animation-name: wiggle; /* select keyframe name */
+    animation-duration: 1s;
+    animation-iteration-count: 6;
+}
+
+/* ********** COLOR BOX CSS ********** */
+
+@keyframes color-morph {
+    0%   {background-color:blue;}
+    25%  {background-color:yellow;}
+    50%  {background-color:red; }
+    75%  {background-color:green; }
+    100% {background-color:blue; }
+}
+
+.color-circle{
+    border-radius: 50%; /* makes div a circle */
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    animation-name: color-morph; 
+    animation-duration: 3s;
+    animation-iteration-count: 2;
 
 }
 
 
-
-
-
-
-
-
-/* RIC FLAIR ANIMATION CSS */
-.ric-flair-container{
+/* ********** RIC FLAIR ANIMATION CSS ********** */
+.ric-flair.container{
     border: 1px solid black;
 }
 
-/* ric flair picture */
+/* 
+    ric flair picture 
+*/
 .ric-img {
     height: 300px;
 }
 
 
-/* animation starts text off screen and pulls it to original placement */
-@keyframes example {
+/* 
+    animation starts text off screen and pulls it to original placement 
+*/
+@keyframes fly-in {
     from {left: 110vw;}
     to {left: 0}
 }
 
 li {
-    position: relative; /* so it's free to move */
-    animation-name: example; /* applies css in keyframes rule immediately above */
-    animation-duration: 3s;  /* seconds animation should last */
+    position: relative; 
+    animation-name: fly-in; 
+    animation-duration: 3s;  
 }
 
 /* 
@@ -51,3 +78,26 @@ li {
 .item-5 {  animation-delay: 2s; }
 .item-6 {  animation-delay: 2.5s; }
 .item-7 {  animation-delay: 3s; }
+
+
+
+
+
+
+/* ********** JUST SOME CSS TO LAYOUT THINGS NICELY ********** */
+
+/* 
+    centers everything horizantally on page 
+*/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 
+    put a little space btwn each example 
+*/
+.container {
+    margin: 20px;
+}
