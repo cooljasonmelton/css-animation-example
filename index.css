@@ -1,25 +1,35 @@
-/* ********** WIGGLING HAND AKA WAVING ********** */
+/* ******************** WIGGLING HAND A.K.A. WAVING ******************** */
 
 
-/* 
-    wiggles target back and forth
-    set keyframes name 'wiggles' 
-*/
+/* set keyframes name as 'wiggles' */
 @keyframes wiggle { 
+
+    /* when applied, 'from' sets starting property, 'to' sets ending property */
     from {left: 20px;} 
     to {right: 20px;}
 }
 
-
 .hand-img{
-    position: relative; /* must be relative so left and right works (above) */
-    animation-name: wiggle; /* select keyframe name */
-    animation-duration: 1s;
+    /* position must be relative so left and right works (above) */
+    position: relative; 
+
+    /* select animation-name by @keyframes name */
+    animation-name: wiggle; 
+
+    /* select animation-duration in seconds */
+    animation-duration: 1s; 
+
+    /* optional: how many times animation plays */
     animation-iteration-count: 6;
 }
 
-/* ********** COLOR BOX CSS ********** */
 
+/* ******************** COLOR BOX CSS ******************** */
+
+/* 
+    percentages refer to the point in the duration 
+    that each property is applied
+*/
 @keyframes color-morph {
     0%   {background-color:blue;}
     25%  {background-color:yellow;}
@@ -30,27 +40,20 @@
 
 .color-circle{
     border-radius: 50%; /* makes div a circle */
+    
     height: 300px;
     width: 300px;
+    
     background-color: blue;
+
+    /* animation settings */
     animation-name: color-morph; 
     animation-duration: 3s;
     animation-iteration-count: 2;
-
 }
 
 
-/* ********** RIC FLAIR ANIMATION CSS ********** */
-.ric-flair.container{
-    border: 1px solid black;
-}
-
-/* 
-    ric flair picture 
-*/
-.ric-img {
-    height: 300px;
-}
+/* ******************** RIC FLAIR ANIMATION CSS ******************** */
 
 
 /* 
@@ -82,22 +85,21 @@ li {
 
 
 
+/* ******************** SOME CSS TO LAYOUT THINGS NICELY ******************** */
 
-
-/* ********** JUST SOME CSS TO LAYOUT THINGS NICELY ********** */
-
-/* 
-    centers everything horizantally on page 
-*/
+/* centers everything horizantally on page */
 body{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 
-    put a little space btwn each example 
-*/
+/* put a little space btwn each example */
 .container {
-    margin: 20px;
+    margin: 40px;
+}
+
+/* set size of ric flair image */
+.ric-img {
+    height: 300px;
 }
