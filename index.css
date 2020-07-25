@@ -1,6 +1,5 @@
 /* ******************** WIGGLING HAND A.K.A. WAVING ******************** */
-
-/* set keyframes name as 'wiggles' */
+/* set keyframes name as 'wiggle' */
 @keyframes wiggle { 
 
     /* when applied, 'from' sets starting property, 'to' sets ending property */
